@@ -74,6 +74,7 @@ class SubSub extends Component {
 
   render() {
     const style = {
+
       color: this.context.color,
       background: 'green',
       width: 200
