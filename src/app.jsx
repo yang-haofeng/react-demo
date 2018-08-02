@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import Demo1 from './compoents/Demo1.jsx';
+import Demo2 from './compoents/Demo2.jsx';
+import Demo3 from './compoents/Demo3.jsx';
 
 /***********React 初始化*************/
 
@@ -83,7 +85,7 @@ ReactDOM.render(
 
 
 ReactDOM.render(
-  <Demo1 />
+  <Demo2 />
   ,
   document.getElementById('app')
 );
