@@ -125,7 +125,7 @@ ReactDOM.render(
 
 
 ReactDOM.render(
-    <Demo7/>
+    <Demo2/>
     ,
     document.getElementById('app')
 );

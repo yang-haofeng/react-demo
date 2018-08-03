@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 
 //展示组件和容器组件
 
-export default class Demo2 extends React.Component {
+export default class Demo2 extends Component {
 
-  render(props) {
+  render() {
     return (
       <div>
         {/* 容器式组件 */}
@@ -15,24 +15,21 @@ export default class Demo2 extends React.Component {
         </Title>
         <hr/>
         {/* 展示组件 */}
-        <Description text={'描述......'} />
+        <Description text={'描述......'}/>
       </div>
     );
   }
 }
 
-class Title extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  render(props){
+class Title extends Component {
+  render() {
     return <h1>{this.props.children}</h1>
   }
 }
 
-class Description extends React.Component{
+class Description extends Component {
 
-  render(props){
+  render() {
     return <div>{this.props.text}</div>
   }
 }
