@@ -12,20 +12,20 @@ import Demo7 from './compoents/Demo7.jsx';
 
 /***********React 初始化*************/
 
-/*
+
+
 ReactDOM.render(
   <div>
-    <h1>Hello, world!</h1>
-  </div>
-  ,
+    <h1>Hello React</h1>
+  </div>,
   document.getElementById('app')
 );
-*/
+
+
 
 /***********组件和jsx*************/
 
 //组件定义
-
 
 
 /*
@@ -46,8 +46,7 @@ class Component2 extends Component {
 
 //JSX语法使用组件
 ReactDOM.render(
-  <Component1/>
-  ,
+  <Component1/>,
   document.getElementById('app')
 );
 
@@ -59,21 +58,23 @@ const name = '张三';
 const names = ['张三', '李四', '王五'];
 const flag = false;
 const jsx = (
-    <div>
-        {/* 变量的使用 */}
-        <p>I am {name}</p>
-        {/* 条件判断 */}
-        {
-            flag ? <p>I am {name}</p> : <p>I am not {name}</p>
-        }
-        {/* 数组循环 */}
-        {
-            names.map((name, index) =>
-                <p key={index}>Hello, I am {name}</p>
-            )
-        }
-    </div>
+  <div>
+    {/* 变量的使用 */}
+    <p>I am {name}</p>
+    {/* 条件判断 */}
+    {
+      flag ? <p>I am {name}</p> : <p>I am not {name}</p>
+    }
+    {/* 数组循环 */}
+    {
+      names.map((name, index) =>
+        //循环创建组件时，要提供key值
+        <p key={index}>Hello, I am {name}</p>
+      )
+    }
+  </div>
 );
+
 /*
 ReactDOM.render(
     jsx,
@@ -84,8 +85,8 @@ ReactDOM.render(
 
 /***********props和state*************/
 
-/*
 
+/*
 class PropsTest extends Component {
   render() {
     return <h1>Hello {this.props.name}</h1>
@@ -107,25 +108,26 @@ class StateTest extends Component {
     setTimeout(() => {
       this.setState({
         name: 'Everybody'
-      });
+      }, () =>
+        console.log('改变了state后调用')
+      );
     }, 3000);
   }
 }
 
 ReactDOM.render(
-  <PropsTest name={'Everyone'} />
-  ,
+  <PropsTest name={'Everyone'} />,
   document.getElementById('app')
 );
 
 */
 
-
 /**************Demo****************/
 
 
+/*
 ReactDOM.render(
-    <Demo2/>
-    ,
-    document.getElementById('app')
+  <Demo1/>,
+  document.getElementById('app')
 );
+*/

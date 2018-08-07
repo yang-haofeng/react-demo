@@ -9,6 +9,7 @@ export default class Demo6 extends Component {
       <Router>
         <Wrapper>
           <Route path="/a" component={A}/>
+          {/*<Route exact path="/a" component={A}/>*/}
           <Route path="/a/:id" component={A1}/>
           <Route path="/b" component={B}/>
         </Wrapper>
@@ -17,6 +18,7 @@ export default class Demo6 extends Component {
   }
 }
 
+//组件A
 class A extends Component {
 
   render() {
@@ -28,19 +30,20 @@ class A extends Component {
   }
 }
 
+//带参数的组件A
 class A1 extends Component {
 
   render() {
     return (
       <div>
-        {/*获取匹配到的路由参数*/}
+        {/* this.props.match.params 获取匹配到的路由参数 */}
         带参数的Component A 参数：{this.props.match.params.id}
       </div>
     )
   }
 }
 
-
+//组件B
 class B extends Component {
   render() {
     return <div>Component B</div>

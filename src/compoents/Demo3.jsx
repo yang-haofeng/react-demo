@@ -28,9 +28,6 @@ export default class Demo2 extends React.Component {
 }
 
 class Child1 extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleClick = () => {
     this.props.changeChild2Color('red');
@@ -47,9 +44,6 @@ class Child1 extends React.Component {
 }
 
 class Child2 extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
