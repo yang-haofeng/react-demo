@@ -23,6 +23,7 @@ class A extends Component {
         Component A
 
         <Switch>
+          {/*通过this.props.match.path 取到匹配的路由地址*/}
           <Route exact path={`${this.props.match.path}`} render={(route) => {
             return <div>当前组件是不带参数的A</div>
           }}/>

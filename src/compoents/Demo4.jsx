@@ -12,7 +12,7 @@ export default class Demo4 extends Component {
     }
   }
 
-  // 父组件声明自己支持 context
+  // 父组件声明 context
   static childContextTypes = {
     color: PropTypes.string,
     callback: PropTypes.func,
@@ -69,12 +69,13 @@ class SubSub extends Component {
   }
 
   click = () => {
+    //使用 context callback
     this.context.callback('我在子组件的子组件里触发');
   }
 
   render() {
     const style = {
-
+      //使用 context color
       color: this.context.color,
       background: 'green',
       width: 200

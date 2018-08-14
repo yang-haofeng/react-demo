@@ -23,6 +23,8 @@ ReactDOM.render(
 
 
 
+
+
 /***********组件和jsx*************/
 
 //组件定义
@@ -68,7 +70,7 @@ const jsx = (
     {/* 数组循环 */}
     {
       names.map((name, index) =>
-        //循环创建组件时，要提供key值
+        //NOTE:循环创建组件时，要提供唯一key值
         <p key={index}>Hello, I am {name}</p>
       )
     }
@@ -85,8 +87,8 @@ ReactDOM.render(
 
 /***********props和state*************/
 
-
 /*
+
 class PropsTest extends Component {
   render() {
     return <h1>Hello {this.props.name}</h1>
@@ -107,7 +109,7 @@ class StateTest extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        name: 'Everybody'
+        name: 'Everybody!!!!!!!!!!!!!!'
       }, () =>
         console.log('改变了state后调用')
       );
@@ -116,7 +118,7 @@ class StateTest extends Component {
 }
 
 ReactDOM.render(
-  <PropsTest name={'Everyone'} />,
+  <StateTest name={'Everyone'} />,
   document.getElementById('app')
 );
 
@@ -126,8 +128,11 @@ ReactDOM.render(
 
 
 /*
+
 ReactDOM.render(
-  <Demo1/>,
+  <Demo7/>,
   document.getElementById('app')
 );
+
 */
+

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-// 事件处理
+// React事件处理
 export default class Demo1 extends Component {
   constructor(props) {
     super(props);

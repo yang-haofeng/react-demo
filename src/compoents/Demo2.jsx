@@ -23,6 +23,7 @@ export default class Demo2 extends Component {
 
 class Title extends Component {
   render() {
+    //通过 this.props.children 获取传递给组件的节点
     return <h1>{this.props.children}</h1>
   }
 }
